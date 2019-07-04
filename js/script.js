@@ -15,8 +15,8 @@ var controller = {
     },
     findPDPJSON: function () {
         if (typeof pdpJSON !== 'undefined') {
-            model.currentDeviceID = pdpJSON.output.vzwDL.page.deviceId
-            model.currentDeviceName = pdpJSON.output.vzwDL.productDetails.name
+            model.currentDeviceID = pdpJSON.output.pageData.productDetails.deviceId
+            model.currentDeviceName = pdpJSON.output.pageData.productDetails.displayName
         }
     },
     getDeviceID: function () {
