@@ -123,6 +123,11 @@ var requestedDataView = {
         if (deviceID === null) {
             this.returnMsg.textContent = "NO pdpJSON on this page...Move along."
             setPanelView.infoPanelContainer.appendChild(this.returnMsg)
+            this.searchFeild.placeholder = "Enter Device Search Verizon"
+            this.searchBtn.textContent = "Search for Devices"
+            setPanelView.infoPanelContainer.appendChild(this.searchContainer)
+            this.searchContainer.appendChild(this.searchFeild)
+            this.searchContainer.appendChild(this.searchBtn)
         } else {
             this.returnMsg.innerHTML = 'Device Found: <br>' + '<span class="device-name">' + deviceName + '</span>'
             setPanelView.infoPanelContainer.appendChild(this.returnMsg)
