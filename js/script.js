@@ -75,6 +75,7 @@ var controller = {
 var clearPanelView = {
     clearPanel: function(){
         document.body.removeChild(setPanelView.infoPanelContainer)
+        setCSS.remove();
     }
 }
 
@@ -176,11 +177,16 @@ var collectionView = {
 var setCSS = {
     init: function(){
         this.mysheet = document.createElement('style');
+        this.mysheet.classList.add('idFinderStyles')
         this.mysheet.innerHTML = "body .info-panel-container,html .info-panel-container{margin:0;font-family:Roboto,sans-serif}.info-panel-container div{box-sizing:unset}.info-panel-container :focus{outline:1px dashed #fff;outline-offset:2px}.info-panel-container{position:fixed;top:0;right:0;width:50%;height:100%;padding:20px;background:#000;opacity:.9;z-index:10000;color:#9e9e9e;overflow:scroll}.info-panel-container .close-panel{position:absolute;top:10px;right:10px;transition:.2s;transform:rotate(45deg);color:#ceff51;font-size:32px}.info-panel-container .close-panel:before{content:'+'}.info-panel-container .close-panel:hover{transform:rotate(226deg) scale(1.4)}.info-panel-container .info-title,h2{font-size:28px;margin:0;text-align:center;color:#ceff51}.info-panel-container .returnMsg{font-size:20px;line-height:2;color:#ceff51}.info-panel-container .device-name{font-size:24px;color:#9e9e9e;font-weight:700;padding-bottom:5px;border-bottom:2px solid #ceff51}input{background:#000;height:30px;border:none;border-bottom:2px solid#ceff51;color:#ceff51;font-size:16px}.info-panel-container button{position:relative;padding:8px 15px;margin-left:10px;font-weight:700;border:2px solid #ceff51;background:#000;color:#ceff51}.info-panel-container button:hover{color:#000;background:#ceff51;border:2px solid #000}.info-panel-container .search{border-top:1px solid #ceff51;padding-top:20px;margin:40px 0}.info-panel-container .search input{font-size:12px;min-width:50%}.info-panel-container .id-collection{list-style-type:none;padding:0;transition:all 1s}.info-panel-container .id-collection li{margin:10px 0;padding:10px 0;background:#171414;color:#fff}.info-panel-container .id-collection li:nth-child(even){color:#ceff51}.info-panel-container .seperator{padding:0 10px}.info-panel-container .list-area{display:inline-block;max-width:60%;min-height:100px;vertical-align:middle}@media screen and (max-width:768px){.info-panel-container{width:80%}}@media screen and (max-width:560px){.info-panel-container{width:100%}}";
         this.render();
     },
     render: function(){
         document.head.appendChild(this.mysheet);
+    },
+    remove: function(){
+        this.cssTarget = document.querySelector('.idFinderStyles')
+        document.head.removeChild(this.cssTarget )
     }
 }
 
