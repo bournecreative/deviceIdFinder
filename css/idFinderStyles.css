@@ -51,7 +51,8 @@ body .info-panel-container {
 
 /***  Text  ***/
 
-.info-panel-container .info-title, h2{
+.info-panel-container .info-title,
+.info-panel-container h2{
     font-size: 28px;
     margin: 0;
     text-align: center;
@@ -74,7 +75,7 @@ body .info-panel-container {
 
 /***   Input   ***/
 
-input{
+.info-panel-container input{
     background: #000000;
     height: 30px;
     border: none;
