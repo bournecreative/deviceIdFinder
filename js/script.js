@@ -146,9 +146,9 @@
             this.searchFeild = document.createElement('input');
             this.searchBtn = document.createElement('button');
             // set attributes, classes, event listeners
-            this.searchContainer.classList.add('search');
+            this.searchContainer.classList.add('idF-search');
             this.searchFeild.placeholder = "Enter Device Search Verizon";
-            this.searchBtn.classList.add('searchBtn');
+            this.searchBtn.classList.add('idF-searchBtn');
             this.searchBtn.textContent = "Search for Devices";
             this.searchBtn.addEventListener('click', controller.searchDevices);
             // append to DOM
@@ -166,7 +166,7 @@
             this.clearBtn = document.createElement('button');
             // set classes, event listeners
             this.collection.classList.add('id-collection');
-            this.clearBtn.classList.add('list-btn');
+            this.clearBtn.classList.add('idF-listBtn');
             this.clearBtn.addEventListener('click', controller.clearList);
             this.renderCollection();
         },

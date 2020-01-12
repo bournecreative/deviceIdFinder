@@ -39,6 +39,9 @@ body .info-panel-container {
     transform: rotate(45deg);
     color: #ceff51;
     font-size: 32px;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+        transform-origin: center center;
 }
 
 .info-panel-container .close-panel:before{
@@ -102,16 +105,15 @@ body .info-panel-container {
     border: 2px solid #000000;
 }
 
-.info-panel-container .search{
+.info-panel-container .idF-search{
     border-top: 1px solid #ceff51;
     padding-top: 20px;
     margin: 40px 0;
 }
 
-.info-panel-container .search input{
+.info-panel-container .idF-search input{
     font-size: 12px;
     min-width: 50%;
-
 }
 
 .info-panel-container .id-collection{
