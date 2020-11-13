@@ -1,40 +1,17 @@
-# idFinder 
+# idFinder
 
-Often times, our team needs the deviceID from products. These device ids can be found on a global object called PDPJSON on product pages. Digging up these ids is time consuming so I spend some effort creating a small bookmarket to easily extract this information.
+I was taking a course on JavaScript Design Patterns [Udacity](https://www.udacity.com/course/javascript-design-patterns--ud989). One of the sections covered Separation of Concerns which was focused on the principals of model, view, controller. I wanted to apply this principal as illustrated in the course material using Vanilla JavaScript to a project.
 
-## How it works
+At the time, there was a need for business users to obtain product ids from Verizon product pages. To aid them, I decided to create a bookmarklet to speed this time consuming task.
 
-Leverage code as a bookmarklet. Go to product page and launch bookmarklet.
-
-![screen capture of device id found](assets/id-found.png "device id found")
-
-
-The device name and id are referenced. You make copy the device id to your clipboard by selecting the copy button.
-
-### Save to List
-
-The "Save to List" button takes the current device information (name and device id), populates an array and saves it to local storage.
-
-As you can see from the list, there is device information that was previously saved. 
-
-![screen capture of device id list](assets/save-to-local-storage.png "save id to list")
-
-### Clearing the list
-
-The "Clear Collection" button will clear the list of information, ensuring local storage is also cleared to ensure the previously saved items are removed.
-
-![screen capture of device list cleared](assets/clear-local-storage.png "clear list")
-
-### Search
-
-The search input will search for search terms
-
-![screen capture of search](assets/search.png "search")
-
-### No device id found
-
-In the event no device id is present, message will be presented and users can remove panel using the close button in right hand corner.
-
-![screen capture of not found](assets/no-pdp.png "not found")
+## idFinder in action
+![idFinder in action](assets/idFinder.gif)
 
 
+### Features of idFinder
+* Bookmarklet that works with Google Chrome browsers.
+* When idFinder is activated on Verizon product pages, a partial modal is opened that displays product id and product name
+* Product id can be copied to desktop clipboard
+* Product information can be saved to list (stored in local storage)
+* Product lists can be cleared (will clear stored local storage info)
+* Search functionality allows user to search for additional products
